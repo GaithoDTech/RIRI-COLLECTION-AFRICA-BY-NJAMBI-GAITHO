@@ -1,5 +1,5 @@
 body{
-    background-color: lightpink;
+    background-color: bisque;
     margin:0;
     padding: 20px;
     font-family:Arial, sans-serif;
@@ -38,4 +38,5 @@ body{
 }
 h1,h2,h3{
     font-family:'Monstserrat', sans-serif;
+
 }
