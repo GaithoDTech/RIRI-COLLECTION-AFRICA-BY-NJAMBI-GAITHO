@@ -1,0 +1,41 @@
+body{
+    background-color: lightpink;
+    margin:0;
+    padding: 20px;
+    font-family:Arial, sans-serif;
+
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+.product{
+   width: 250px;
+   padding: 15px;
+   border-radius: 10px;
+   text-align: center;
+}
+.product img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.site-header{
+    display: flex;
+    justify-content: space-between;/*Brand left,Delivery right*/
+   align-items: flex-start;        /*Top align both sides*/
+    padding:20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.delivery-header{
+    display: flex;
+    text-align:right; /*align text right*/
+    padding: 10px;
+    border-radius:10px;
+}
+h1,h2,h3{
+    font-family:'Monstserrat', sans-serif;
+}
