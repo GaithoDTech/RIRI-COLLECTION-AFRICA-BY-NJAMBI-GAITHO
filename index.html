@@ -18,19 +18,17 @@
     <!-- HEADER -->
     <header class="site-header">
         <div class="brand">
-            <h2>RIRI COLLECTION AFRICA BY NJAMBI GAITHO</h2>
+            <h1>RIRI COLLECTION AFRICA BY NJAMBI GAITHO</h1>
             <p>Genuine Leather Bags</p>
-            <h2>Price</h2>
-            <p>KES 1,200</p>
-            <h2>Contact</h2>
-            <p>0795344686</p>
-            <h2>Follow us on social media</h2>
-            <a href="https://instagram.com/gaithonjambi" target="_blank">
-                <img src="instagram-icon.png" alt="Instagram" width="30">
-            </a>
-            <a href="https://tiktok.com/njambigaitho" target="_blank">
-                <img src="tiktok-icon.png" alt="TikTok" width="30">
-            </a>
+            <h2>Contact: 0795344686</h2>
+            <div class="social">
+                <a href="https://instagram.com/gaithonjambi" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram" width="30">
+                </a>
+                <a href="https://tiktok.com/njambigaitho" target="_blank">
+                    <img src="tiktok-icon.png" alt="TikTok" width="30">
+                </a>
+            </div>
         </div>
 
         <div class="delivery-header">
@@ -65,4 +63,50 @@
                 <a href="https://api.whatsapp.com/send?phone=254795344686&text=Hi%20I%20would%20like%20to%20inquire%20about%20the%20Riri%20bags" target="_blank" class="buy-btn">Buy on WhatsApp</a>
             </div>
 
-            <div class="
+            <div class="product">
+                <img src="images/uthaka.jpg" alt="Uthaka Handbag">
+                <h3>Uthaka</h3>
+                <p class="price">KES 1200</p>
+                <a href="https://api.whatsapp.com/send?phone=254795344686&text=Hi%20I%20would%20like%20to%20inquire%20about%20the%20Riri%20bags" target="_blank" class="buy-btn">Buy on WhatsApp</a>
+            </div>
+
+            <div class="product">
+                <img src="images/utheri.jpg" alt="Utheri Handbag">
+                <h3>Utheri</h3>
+                <p class="price">KES 1200</p>
+                <a href="https://api.whatsapp.com/send?phone=254795344686&text=Hi%20I%20would%20like%20to%20inquire%20about%20the%20Riri%20bags" target="_blank" class="buy-btn">Buy on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTALL BUTTON -->
+    <div class="install-app-container">
+        <button id="installAppBtn">📲 Install Riri Collection Africa</button>
+    </div>
+
+    <!-- INSTALL SCRIPT -->
+    <script>
+        let deferredPrompt;
+        const installBtn = document.getElementById('installAppBtn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = 'inline-block';
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    console.log('App Installed');
+                } else {
+                    console.log('App installation dismissed');
+                }
+                deferredPrompt = null;
+            }
+        });
+    </script>
+</body>
+</html>
