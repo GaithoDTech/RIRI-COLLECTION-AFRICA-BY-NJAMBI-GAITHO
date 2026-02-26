@@ -28,5 +28,3 @@ caches.open("CACHE_NAME").then(function(cache) {
         );
     });
 
-
-
