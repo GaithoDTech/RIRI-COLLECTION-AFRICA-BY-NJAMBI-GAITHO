@@ -3,13 +3,13 @@
     "short_name":"Riri Africa",
     "start_url":".",
     "display":"standalone",
-    "background color":"bisque",
-    "theme color":"bisque",
+    "background_color":"bisque",
+    "theme_color":"bisque",
     "icons":[
     {
         "src":"icon-192.png",
         "sizes":"192x192",
-        "type":"image/png",
+        "type":"image/png"
     },
     {
         "src":"icon-512.png",
@@ -17,4 +17,5 @@
         "type":"image/png"
     }
 ]
+
 }
