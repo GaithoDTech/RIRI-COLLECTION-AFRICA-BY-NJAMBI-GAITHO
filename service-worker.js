@@ -1,10 +1,16 @@
 self.addEventListener("install",function(event){
 event.waitUntil(
-cashes.open("riri-cache").then(function(cache) {
-    return cache.addAll([
+caches.open("riri-cache").then(function(cache) {
+    console.log("Opened cache");
+    return cache.addAll(urlsToCache);
         "./",
         "./index.html",
-        "./style.css"
+        "./style.css",
+        "./ukeni.jpg.jpg",
+        "./utana.jpg.jpg",
+        "./uthaka.jpg.jpg",
+        "./utugi.jpg.jpg",
+        "./wendo.jpg,jpg",
     ]);
     })
     );
@@ -17,3 +23,4 @@ cashes.open("riri-cache").then(function(cache) {
             })
         );
     });
+
