@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="style .css">
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Riri Collection Africa</title>
+  
+  <link rel="stylesheet" href="style .css">
 <link rel="manifest" href="manifest.json">
-<href="https:fonts.googleapis.com/css?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link
+   <href="https:fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+ </head>
+ <body>
+  <header class="site-header">
+   <h2 style="font-family:Monteserrat;font-weight:700;">
+    RIRI COLLECTION AFRICA BY NJAMBI GAITHO
+   </h2>
+  </header>
+  
+  
+ </body>
+
 <h2> RIRI COLLECTION AFRICA BY NJAMBI GAITHO</h2>
 </head>
-<header class="site-header"></header>
+</header>
 <!--LEFT:Brand and contact-->
 <div class="brand"
  <h2> RIRI COLLECTION </h2>
@@ -86,7 +101,7 @@
    </div>
    <script>
     let deferredPrompt;
-    const installBtn =deferredPrompt
+    const installBtn =
     document.getElementById('installAppBtn');
 
     window.addEventListener('beforeinstallprompt',(e)=> {
@@ -96,8 +111,9 @@
     });
 
         installBtn.addEventListener('click',async () => {
-            if (deferredPrompt) {
+            if(deferredPrompt) {
                 deferredPrompt.prompt();
+                await deferredPrompt.userChoice;
                 const {outcome}=await
                  deferredPrompt.userchoice;
                 if (outcome==='accepted') {
@@ -106,11 +122,17 @@
                     console.log('App installation dismissed');
                 }
                 deferredPrompt = null;
-            }
-        });
-        </script>
+             if ('serviceWorker'in navigator){
+              window.addEventListener('load'),()=>{
+               navigator.serviceWorker.register('service-worker.js')
+               .then(()=>console.log('service Worker Registered'));
+              });
+             }
+            </script>
+     
     </body>
 </html>
+
 
 
 
