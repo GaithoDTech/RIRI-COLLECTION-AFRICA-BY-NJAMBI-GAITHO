@@ -93,11 +93,13 @@
         e.preventDefault();
         deferredPrompt = e;
         installBtn.style.display = 'inline-block';//show button});
+    });
 
         installBtn.addEventListener('click',async () => {
             if (deferredPrompt) {
                 deferredPrompt.prompt();
-                const {outcome}=await deferredPrompt.userchoice;
+                const {outcome}=await
+                 deferredPrompt.userchoice;
                 if (outcome==='accepted') {
                     console.log('App Installed');
                 } else {
@@ -107,9 +109,9 @@
             }
         });
         </script>
-    })
     </body>
-    <html>
+</html>
+
 
 
 
