@@ -1,5 +1,5 @@
 body{
-    background-color: bisque;
+    background-color: yellow;
     margin:0;
     padding: 20px;
     font-family:Arial, sans-serif;
@@ -54,4 +54,5 @@ h1,h2,h3{
 }
 #installAppBtn:hover {
     background-color: black;
+
 }
