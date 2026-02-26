@@ -2,13 +2,13 @@
 <html>
 <head>
 <link rel="stylesheet" href="style .css">
-<link
-href="https:fonts.googleapis.com/css?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.json">
+<href="https:fonts.googleapis.com/css?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 <h2> RIRI COLLECTION AFRICA BY NJAMBI GAITHO</h2>
 </head>
 <header class="site-header"></header>
 <!--LEFT:Brand and contact-->
-<div class="brand"
+<div class="brand"></div>
  <h2> RIRI COLLECTION </h2>
  <P>Genuine Leather Bags</P>
     <h2>Price</h2>
@@ -76,6 +76,31 @@ href="https:fonts.googleapis.com/css?family=Montserrat:wght@700&display=swap" re
 
     </div>
    </section>
+   <div class="install-app-container">
+    <button id="installAppBtn"> Install Riri Collection Africa</button>
+   </div>
+   <script>
+    let deferredPrompt;
+    const installBtn =
+    document.getElementById('installAppBtn');
+
+    window.addEventListener('beforeinstallprompt',(e)=> {
+        e.preventDefault();
+        deferredPrompt = e;
+        installBtn.style.display = 'inline-block';//show button});
+
+        installBtn.addEventListener('click',async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const {outcome}=await deferredPrompt.userChoice;
+                if (outcome==='accepted') {
+                    console.log('App Installed');
+                } else {
+                    console.log('App installation dismissed');
+                }
+                deferredPrompt = null;
+            }
+        });
+        </script>
     </body>
-    <html>
- 
+    </html>
